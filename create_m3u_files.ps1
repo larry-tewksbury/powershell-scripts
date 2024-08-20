@@ -11,6 +11,6 @@ function create-m3u{
 
     foreach ($group in $multi_disc_grouped){
         $name = $(($group.Name -replace "\....") + ".m3u")
-        $group.group.Name | Out-File -FilePath .\$name -Append
+        $group.group.Name | Out-File -LiteralPath $name -Append
     }
 }
